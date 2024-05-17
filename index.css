@@ -1,0 +1,135 @@
+:root{
+    --fontFamily: 'Varela Round', sans-serif;
+    --header-background-color: white;
+    --header-color:black;
+    --hero-background-color: #3acec2;
+    --h1-h2-color:white;
+    --featured-text-color:rgba(19, 43, 102, .85);
+
+}
+
+html {
+    font-family: var(--fontFamily);
+
+}
+.container {
+    padding: 0 8px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    background-color: var(--header-background-color);
+    padding: 32px 0;
+    color: var(--header-color);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu li {
+    display: inline-block;
+    margin-right: 16px;
+    text-transform: uppercase;
+}
+
+.hero {
+    background-color: var(--hero-background-color);
+    padding: 64px 0;
+    text-align: center;
+}
+
+.hero-image {
+    width: 200px;
+    margin-bottom: 32px;
+}
+
+h1,
+h2 {
+    color: var(--h1-h2-color);
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.content {
+    padding: 64px 0;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 16px;
+}
+
+.content-column {
+    flex: 1;
+}
+
+
+/* solution 1
+.featured {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.featured-text {
+    background-color: rgba(19, 43, 102, .85);
+    color: white;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    padding: 8px;
+} */
+
+.featured {
+    margin-bottom: 16px;
+    background-image: url("abed.jpg");
+    height: 250px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.featured-text {
+    background-color: var(--featured-text-color);
+    color: white;
+    padding: 8px;
+}
+
+@media(max-width: 400px){
+    .header-contnt{
+        flex-direction: column;
+        align-items: end;
+    }
+    .menu{
+        margin-top:16px;
+    }
+    .content-wrapper{
+        flex-direction: column;
+    }
+
+}
+
+@media (min-width:468px) and (max-width:768px){
+    header{
+        background-color:aqua;
+    }
+}
+
+@media (min-width:769px){
+    header{
+        background-color: gray;
+    }
+}
